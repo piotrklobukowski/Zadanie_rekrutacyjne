@@ -13,6 +13,9 @@
 		23F3FBEB2728978E00E00E35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23F3FBE92728978E00E00E35 /* Main.storyboard */; };
 		23F3FBED2728979400E00E35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23F3FBEC2728979400E00E35 /* Assets.xcassets */; };
 		23F3FBF02728979400E00E35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23F3FBEE2728979400E00E35 /* LaunchScreen.storyboard */; };
+		23F3FBFD2728A67800E00E35 /* CatAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F3FBFC2728A67800E00E35 /* CatAPIService.swift */; };
+		23F3FBFF2728ADDD00E00E35 /* Breed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F3FBFE2728ADDD00E00E35 /* Breed.swift */; };
+		23F3FC012728AE7700E00E35 /* CatData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F3FC002728AE7700E00E35 /* CatData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		23F3FBEC2728979400E00E35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		23F3FBEF2728979400E00E35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		23F3FBF12728979500E00E35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23F3FBFC2728A67800E00E35 /* CatAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatAPIService.swift; sourceTree = "<group>"; };
+		23F3FBFE2728ADDD00E00E35 /* Breed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Breed.swift; sourceTree = "<group>"; };
+		23F3FC002728AE7700E00E35 /* CatData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,50 @@
 		23F3FBE22728978E00E00E35 /* Zadanie rekrutacyjne */ = {
 			isa = PBXGroup;
 			children = (
+				23F3FBFB27289E7600E00E35 /* Services */,
+				23F3FBFA27289CF900E00E35 /* View */,
+				23F3FBF927289CD700E00E35 /* Model */,
+				23F3FBF727289CB000E00E35 /* ViewControllers */,
 				23F3FBE32728978E00E00E35 /* AppDelegate.swift */,
 				23F3FBE52728978E00E00E35 /* SceneDelegate.swift */,
-				23F3FBE72728978E00E00E35 /* ViewController.swift */,
-				23F3FBE92728978E00E00E35 /* Main.storyboard */,
 				23F3FBEC2728979400E00E35 /* Assets.xcassets */,
-				23F3FBEE2728979400E00E35 /* LaunchScreen.storyboard */,
 				23F3FBF12728979500E00E35 /* Info.plist */,
 			);
 			path = "Zadanie rekrutacyjne";
+			sourceTree = "<group>";
+		};
+		23F3FBF727289CB000E00E35 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				23F3FBE72728978E00E00E35 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		23F3FBF927289CD700E00E35 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				23F3FBFE2728ADDD00E00E35 /* Breed.swift */,
+				23F3FC002728AE7700E00E35 /* CatData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		23F3FBFA27289CF900E00E35 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				23F3FBE92728978E00E00E35 /* Main.storyboard */,
+				23F3FBEE2728979400E00E35 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		23F3FBFB27289E7600E00E35 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				23F3FBFC2728A67800E00E35 /* CatAPIService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +179,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23F3FBFD2728A67800E00E35 /* CatAPIService.swift in Sources */,
 				23F3FBE82728978E00E00E35 /* ViewController.swift in Sources */,
+				23F3FC012728AE7700E00E35 /* CatData.swift in Sources */,
 				23F3FBE42728978E00E00E35 /* AppDelegate.swift in Sources */,
+				23F3FBFF2728ADDD00E00E35 /* Breed.swift in Sources */,
 				23F3FBE62728978E00E00E35 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
