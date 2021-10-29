@@ -14,9 +14,7 @@ struct CatData: Decodable {
     let height: Int
     
     enum CodingKeys: String, CodingKey {
-        case breeds = "breeds"
         case photoUrl = "url"
-        case width = "width"
-        case height = "height"
+        case breeds, width, height
     }
 }

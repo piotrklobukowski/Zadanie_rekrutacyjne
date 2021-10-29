@@ -1,0 +1,43 @@
+[
+  {
+    "breeds": [],
+    "categories": [
+      {
+        "id": 5,
+        "name": "boxes"
+      }
+    ],
+    "height": 800,
+    "id": "g7",
+    "url": "https://cdn2.thecatapi.com/images/g7.jpg",
+    "width": 534
+  },
+  {
+    "breeds": [],
+    "height": 348,
+    "id": "2o2",
+    "url": "https://cdn2.thecatapi.com/images/2o2.jpg",
+    "width": 500
+  },
+  {
+    "breeds": [],
+    "height": 244,
+    "id": "4eg",
+    "url": "https://cdn2.thecatapi.com/images/4eg.gif",
+    "width": 500
+  },
+  {
+    "breeds": [],
+    "height": 994,
+    "id": "a0v",
+    "url": "https://cdn2.thecatapi.com/images/a0v.jpg",
+    "width": 778
+  },
+  {
+    "breeds": [],
+    "height": 563,
+    "id": "c6s",
+    "url": "https://cdn2.thecatapi.com/images/c6s.jpg",
+    "width": 900
+  }
+]

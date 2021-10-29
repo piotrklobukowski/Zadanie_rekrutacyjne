@@ -8,12 +8,13 @@
 import Foundation
 import UIKit.UIImage
 
-class CatAPIService {
+class CatAPIService: CatDataProviding {
     private let urlSource = URL(string: "https://api.thecatapi.com/v1/images/search?limit=5")!
     
     func getListOfCats(completion: @escaping ([CatData]) -> ()) {
         URLSession.shared.dataTask(with: urlSource) { data, response, error in
-            DispatchQueue.main.async {
+            DispatchQueue.global(qos: .utility).async {
+            
                 if let error = error {
                     print("Failed to get list of cats from thecatapi: \(error.localizedDescription)")
                     return
@@ -25,5 +26,10 @@ class CatAPIService {
                 completion(decodedData)
             }
         }.resume()
+    }
+    
+    func getPhotoOfCat(from string: String) -> UIImage? {
+        guard let url = URL(string: string), let data = try? Data(contentsOf: url) else { return nil }
+        return UIImage(data: data)
     }
 }
