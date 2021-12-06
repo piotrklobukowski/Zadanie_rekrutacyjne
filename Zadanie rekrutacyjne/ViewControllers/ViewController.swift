@@ -18,6 +18,15 @@ class ViewController: UIViewController {
         catsViewModel.didLoadHandler = { [weak self] in
             self?.tableView.reloadData()
         }
+        NotificationCenter.default.addObserver(self, selector: #selector(reloadTableViewOnRotated), name: UIDevice.orientationDidChangeNotification, object: nil)
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self, name: UIDevice.orientationDidChangeNotification, object: nil)
+    }
+    
+    @objc func reloadTableViewOnRotated() {
+        tableView.reloadData()
     }
 }
 
@@ -26,7 +35,7 @@ extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CatDetailsTableViewCell", for: indexPath) as! CatDetailsTableViewCell
         let cellViewModel = catsViewModel.cellViewModels[indexPath.row]
-        let imageHeight = view.frame.width * cellViewModel.imageRatio
+        let imageHeight = view.safeAreaLayoutGuide.layoutFrame.width * cellViewModel.imageRatio
         cell.configureCell(withText: cellViewModel.cellText, andImage: cellViewModel.cellImage, imageHeight: imageHeight)        
         return cell
     }
